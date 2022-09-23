@@ -1,0 +1,36 @@
+h1{
+    color: blue;
+}
+
+/* Link por default - Que no se han dado clic*/
+a:link{
+color: blueviolet;
+}
+/* Link visitado*/
+a:visited{
+    color: cadetblue;
+    text-decoration: none;
+}
+/* Cuando ponemos el clic sobre el link*/
+a:hover{
+color: #8ecae6;
+text-decoration: underline;
+}
+a:active{
+  color: #023047;  
+  text-decoration: underline;
+}
+h2{
+    color: #560bad;
+}
+a.contenido:link , a.contenido:visited{
+    background-color: #b5179e;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a.contenido:hover, a.contenido:active{
+    background-color: #f72585;
+}
