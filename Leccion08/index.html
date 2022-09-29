@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formularios en HTML</title>
+</head>
+
+<body>
+  <h1>Formularios en HTML</h1>
+  <form>
+    <fieldset>
+      <legend>Datos Persona</legend>
+      <!--form method="POST" novalidate-->
+
+      <label for="idPersona">Id Persona: </label>
+      <br />
+      <input type="text" name="idPersona" id="idPersona" readonly="true" value="100" disabled="true" />
+      <!--Importante usar el disable ya que si esta altivo en este caso no envia el idPersona al servidor - SI SE QUIERE ENVIAR EL PARAMETRO MEJOR ES QUITARLO-->
+      <br />
+
+      <input type="hidden" id="sistema" name="sistema" value="SAP">
+
+      <label for="nombre">Nombre: </label>
+      <br />
+      <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required="true" />
+      <br />
+      <label for="apellido">Apellido: </label>
+      <br />
+      <input type="text" name="apellido" id="apellido" placeholder="Tu apellido" required="true" />
+      <br />
+      <label for="password">Password: </label>
+      <br />
+      <input type="password" name="password" id="password" placeholder="Tu password" required="true" />
+      <br />
+      <label for="email">Email: </label>
+      <br />
+      <input type="email" name="email" id="email" placeholder="Tu email" required="true" />
+      <br />
+      <label for="edad">Edad: </label>
+      <br />
+      <input type="number" name="edad" id="edad" placeholder="Tu edad" required="true" step="any" />
+      <br />
+      <br />
+      <label>Genero</label>
+      <br />
+      <input type="radio" id="femenino" name="genero" value="femenino">
+      <label for="femenino">Femenino</label>
+      <br />
+      <input type="radio" id="masculino" name="genero" value="masculino">
+      <label for="masculino">Masculino</label>
+      <br />
+      <br />
+      <label for="">Musica Favorita</label>
+      <br />
+      <input type="checkbox" id="clasica" name="musica" value="clasica">
+      <label for="clasica">Clasica</label>
+      <br />
+      <input type="checkbox" id="reggue" name="musica" value="reggue">
+      <label for="reggue">Reggue</label>
+      <br />
+      <input type="checkbox" id="jax" name="musica" value="jax">
+      <label for="jax">Jaz</label>
+      <br />
+      <br />
+      <label for="autos">Marca de Auto Favorita:</label>
+      <br />
+      <select name="autos" id="autos" multiple="true">
+        <!--El atribute multiple permite seleccionar varias opciones-->
+        <option value="volvo">Volvo</option>
+        <option value="audi">Audi</option>
+        <option value="bmw" selected="true">Bmw</option>
+        <!--El atributo selected permite qeu esta opcion aparezca por default-->
+      </select>
+      <br />
+      <br />
+      <label for="comentario">Comentario: </label>
+      <br />
+      <textarea name="comentario" id="comentario" cols="30" rows="10">
+      Este es mi comentario
+    </textarea>
+      <br />
+      <br />
+      <input type="submit" value="Enviar" />
+      <input type="submit" formnovalidate="formnovalidate" value="Enviar sin Validar" />
+
+      <input type="reset" value="Restablecer">
+      <a href="login.html">Iniciar Sersion</a>
+    </fieldset>
+  </form>
+</body>
+
+</html>
